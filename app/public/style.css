@@ -1,0 +1,109 @@
+:root {
+  --bg-soft: #f5f7fb;
+  --card-radius: 1rem;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-soft);
+  color: var(--text-main);
+}
+
+.auth-bg {
+  background: linear-gradient(135deg, #0f172a, #1d4ed8);
+  padding: 1.5rem;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  border-radius: 1.25rem;
+}
+
+.navbar-brand {
+  letter-spacing: 0.2px;
+}
+
+.card,
+.project-card,
+.stat-card,
+.empty-state {
+  border-radius: var(--card-radius);
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+}
+
+.subtask-row {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.project-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(15, 23, 42, 0.08);
+}
+
+.status-todo {
+  border-top: 4px solid #0d6efd;
+}
+
+.status-progress {
+  border-top: 4px solid #fd7e14;
+}
+
+.status-completed {
+  border-top: 4px solid #198754;
+}
+
+.badge-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.45rem 0.75rem;
+  white-space: nowrap;
+}
+
+.badge-todo {
+  background-color: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+}
+
+.badge-progress {
+  background-color: rgba(253, 126, 20, 0.12);
+  color: #c96a10;
+}
+
+.badge-completed {
+  background-color: rgba(25, 135, 84, 0.12);
+  color: #198754;
+}
+
+.card-subtasks {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.empty-state {
+  background: #fff;
+  padding: 2rem;
+  text-align: center;
+  border: 1px dashed #d1d5db;
+}
+
+@media (max-width: 576px) {
+  .subtask-row {
+    flex-direction: column;
+  }
+}
